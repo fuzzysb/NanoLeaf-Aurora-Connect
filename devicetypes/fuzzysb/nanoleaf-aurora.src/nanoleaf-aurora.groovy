@@ -16,7 +16,7 @@
  *
  *	Updates:
  *	Date: 2017-12-21  v1.0 Formatted to work with New Nanoleaf Aurora Smartapp to handle Token Creation etc..
- 
+ */
 import groovy.json.JsonSlurper
 
 metadata {
@@ -45,8 +45,8 @@ metadata {
 
 		multiAttributeTile(name:"switch", type: "lighting", width: 6, height: 4, decoration: "flat", canChangeIcon: true){
 			tileAttribute ("device.switch", key: "PRIMARY_CONTROL") {
-				attributeState "on", label: 'on', action: "off", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/images/aurora-on.png", backgroundColor: "#00a0dc"
-				attributeState "off", label: 'off', action: "on", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/images/aurora-off.png", backgroundColor: "#ffffff"
+				attributeState "on", label: 'on', action: "off", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/Images/aurora-on.png", backgroundColor: "#00a0dc"
+				attributeState "off", label: 'off', action: "on", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/Images/aurora-off.png", backgroundColor: "#ffffff"
 		}
             	
 		tileAttribute ("level", key: "SLIDER_CONTROL", range:"(1..100)") {
@@ -71,7 +71,7 @@ metadata {
         	}
 		
 		standardTile("previousScene", "scene", width: 1, height: 1, decoration: "flat") {
-			state "default", label: "", backgroundColor: "#ffffff", action: "previousScene", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/images/aurora-left.png"
+			state "default", label: "", backgroundColor: "#ffffff", action: "previousScene", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/Images/aurora-left.png"
 		} 
 
 		valueTile("currentScene", "scene", width: 4, height: 1, decoration: "flat") {
@@ -79,7 +79,7 @@ metadata {
 		} 
 
 		standardTile("nextScene", "scene", width: 1, height: 1, decoration: "flat") {
-			state "default", label: "", backgroundColor: "#ffffff", action: "nextScene", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/images/aurora-right.png"
+			state "default", label: "", backgroundColor: "#ffffff", action: "nextScene", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/Images/aurora-right.png"
 		} 
         
         	standardTile("refresh", "device.switch", decoration: "flat", width: 1, height: 1) {
