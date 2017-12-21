@@ -32,7 +32,8 @@ metadata {
 		command "nextScene"
 		command "setScene1"
 		command "setScene2"
-		command "setScene3"	
+		command "setScene3"
+        command "setScene4"	
             
 		attribute "scene", "String"
 		attribute "scenesList", "String"
@@ -69,6 +70,10 @@ metadata {
         	standardTile("scene3", "scene", width: 2, height: 1, decoration: "flat") {
         		state "val", label: '${currentValue}', backgroundColor: "#ffffff", action: "setScene3" 
         	}
+            
+            standardTile("scene4", "scene", width: 2, height: 1, decoration: "flat") {
+        		state "val", label: '${currentValue}', backgroundColor: "#ffffff", action: "setScene4" 
+        	}
 		
 		standardTile("previousScene", "scene", width: 1, height: 1, decoration: "flat") {
 			state "default", label: "", backgroundColor: "#ffffff", action: "previousScene", icon: "https://raw.githubusercontent.com/fuzzysb/NanoLeaf-Aurora-Connect/master/devicetypes/fuzzysb/nanoleaf-aurora.src/Images/aurora-left.png"
@@ -94,7 +99,8 @@ metadata {
         	input name: "apiKey", type: "text", title: "Aurora API Key", description: "Enter The Key Returned By The Api Authentication Method", required: true
     		input name: "scene1", type: "text", title: "Favorite Scene 1", description: "Enter a Scene name", required: false
         	input name: "scene2", type: "text", title: "Favorite Scene 2", description: "Enter a Scene name", required: false
-        	input name: "scene3", type: "text", title: "Favorite Scene 3", description: "Enter a Scene name", required: false    
+        	input name: "scene3", type: "text", title: "Favorite Scene 3", description: "Enter a Scene name", required: false
+            input name: "scene4", type: "text", title: "Favorite Scene 4", description: "Enter a Scene name", required: false
 	}
 }
 
@@ -207,6 +213,11 @@ def setScene2() {
 def setScene3() {
 	sendEvent(name: "scene3", value: "${scene3}")
 	changeScene("${scene3}")
+} 
+
+def setScene4() {
+	sendEvent(name: "scene4", value: "${scene4}")
+	changeScene("${scene4}")
 } 
 
 def setLevel(Integer value) {
